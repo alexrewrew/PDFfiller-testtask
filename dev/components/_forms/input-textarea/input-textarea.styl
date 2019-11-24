@@ -1,0 +1,80 @@
+input, select
+  border-radius r(3)
+  bo(1, $borders)
+  box-shadow $shadow1
+  fs(14)
+  her(32)
+  fca()
+  bg($wt)
+  wi(100%)
+  padding 0 r(10)
+  -webkit-appearance none
+  trans()
+  &:focus
+    outline none
+    border-color $wt
+    box-shadow: 0 0 r(4) rgba(81, 203, 238, 1);
+  &.error
+    box-shadow: inset r(1) r(1) r(2) 0 rgba(0, 0, 0, 0.2);
+    bo(1, $red)
+    & + .error
+      text-align center
+      border-radius r(3)
+      position absolute
+      padding r(8) r(5) r(9)
+      br(38)
+      rrm(19)
+      lrm(19)
+      fw(400)
+      box-shadow: $shadow2
+      bo(1, $red)
+      bg($red2)
+      line-height: 1.31;
+      fs(13)
+      co($red)
+      z-index 10
+
+      &:before, &:after
+        ba()
+        width: 0;
+        height: 0;
+        transform-origin: 0 0;
+        transform: rotate(-45deg);
+        clm(left, 50%, 10)
+
+      &:after
+        brm(14);
+        border: r(7) solid $red2;
+        border-color: transparent transparent $red2 $red2;
+
+      &:before
+        brm(15);
+        border: r(7) solid $red;
+        border-color: transparent transparent $red $red;
+        box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+
+
+input
+  +placeholder()
+    co($placeholders)
+
+input
+  &:-webkit-autofill
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: $black !important
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+  -webkit-appearance: none;
+  margin: 0;
+
+input[type=number]
+  -moz-appearance: textfield;
+
+label
+  fw(700)
+  fs(14)
+  line-height 1
+
+
+
