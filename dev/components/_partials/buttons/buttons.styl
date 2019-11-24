@@ -34,10 +34,11 @@ button
     z-index -1
 
   &:hover
-    background $wt
-    co($orange)
-    &:after
-      opacity 0
+    +lg()
+      background $wt
+      co($orange)
+      &:after
+        opacity 0
 
 .btn-center
   mc(0)
